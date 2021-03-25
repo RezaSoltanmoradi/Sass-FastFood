@@ -1,0 +1,264 @@
+.navbar{
+position: relative;
+z-index: 500;
+.hanburgere-menu{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    z-index: 500;
+    .menu{
+        @extend %fullspace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform 1s;
+        z-index: 500;
+
+        &-line{
+            width: 100%;
+            height: 4px;
+            background-color: $color-secodary;
+        transition: transform all .5 .5;
+        transform-origin: right;
+        }
+    }
+   
+        .navbar-navigation-left{
+            width: 50%;
+            height: 100%;
+            background-color: $color-dark;
+            position: fixed;
+            left: -50vw;
+                @include flexing;
+                transition: left .8s cubic-bezier(.5,0,0,.5);
+            .left-img{
+                position: absolute;
+                width:300px;
+                height:200px;
+                border-radius: 50%;
+                box-shadow: rgb(50, 100, 150) 0px 15px 60px;
+                cursor: pointer;
+                :hover{
+                    z-index: 100;
+                }
+            }
+            .left-img-1{
+              top: 15%;
+              left: 15%;
+              z-index: 1;
+              &:hover{
+              transform:rotate(360deg);
+                width: 350px;
+                height: 250px;
+              z-index: 200;
+              transition: height .5s ,width .5s,transform 1s;
+
+          }
+            }
+            .left-img-2{
+                top: 35%;
+                left: 25%;
+              z-index: 1;
+              &:hover{
+              transform:rotate(360deg);
+                  width: 350px;
+                  height: 250px;
+                z-index: 200;
+                transition: height .5s ,width .5s,transform 1s;
+            }
+
+              }
+              .left-img-3{
+                top: 55%;
+                left: 35%;
+              z-index: 1;
+              &:hover{
+              transform:rotate(360deg);
+                width: 350px;
+                height: 250px;
+              z-index: 200;
+              transition: height .5s ,width .5s,transform 1s;
+
+          }
+
+              }
+        }
+        .navbar-navigation-right{
+            width: 50vw;
+            height: 100vh;
+            background-color: #1f1d1f;
+            position: fixed;
+            right: -50vw;
+            @include flexing;
+            transition: right .8s cubic-bezier(.5,0,0,.5);
+            font-size: 45px;
+            padding-top: 0px;
+            font-family: $font-Sahel;
+            direction:center;
+
+.nav-list-item{
+    list-style: none;
+    text-align: center;
+    padding-top: 40px;
+
+    :hover{
+letter-spacing: 5px;
+word-spacing: 10px;
+transition:letter-spacing 1s ;
+    }
+    .nav-list-link{
+    text-decoration: none;
+color: wheat;
+&:hover{
+    color: skyblue;
+}
+    }
+}
+        }
+    }   
+}
+
+.checbox:checked ~ .hanburgere-menu .navbar-navigation-left {
+left: 0;
+
+}
+.checbox:checked ~ .hanburgere-menu .navbar-navigation-right{
+    right: 0;
+    }
+    .checbox:checked ~ .hanburgere-menu .menu{
+        transform: rotatez(90deg);
+        }
+        .checbox:checked ~ .hanburgere-menu .menu-line-1{
+            transform: rotatez(-40deg);
+        }
+        .checbox:checked ~ .hanburgere-menu .menu-line-2{
+opacity: 0;          
+          }
+        .checbox:checked ~ .hanburgere-menu .menu-line-3{
+            transform: rotatez(40deg);
+                                }
+.header{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba($color-black,0.8),rgba($color-black,0.6)),url(../images/bg.jpeg) center no-repeat ;
+    background-size: cover;
+    // position: relative;
+   
+.brand{
+    display: flex;
+    align-items: center;
+@include centering(15%);
+}
+&-banner{
+    @include centering(50%);
+    text-align: center;
+}
+}
+.about-us{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+.about-us-left{
+    width: 40%;
+    img{
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+ .about-us-right{   
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    .stars{
+        margin: 30px 0;
+    }
+    .star{
+        color: $color-secodary;
+        font-size: 15px;
+        margin-left: 10px;
+        padding-bottom: 50px;
+    }
+    
+    .main-heading{
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .sub-heading{
+        font-size: 40px;
+        margin-bottom: 20px;
+
+    }
+    .discribtion{
+        color: $color-praimary;
+        font-size: 25px;
+        font-family: $font-Nastaliq;
+        direction: rtl;
+        text-align: justify;
+        &::first-letter{
+            padding-right: 100px;
+        }
+    }
+}
+}
+.Gallery{
+    z-index: 1;
+
+    .cards-Wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+    z-index: 1;
+    }
+}
+.footer{
+    padding: 70px 0;
+    @include flexing;
+    flex-direction: column;
+.brand{
+    display: flex;
+    align-items: center;
+    margin-bottom :70px;
+}
+    .social-media{
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        margin-bottom: 70px;
+        &-item{
+        list-style: none;
+        }
+        &-link{
+            text-decoration: none;
+            font-size: 50px;
+            padding-right: 20px;
+            color: $color-praimary;
+            transition: color .5s;
+            &:hover{
+                color: $color-secodary;
+            }
+        }
+    }
+&-copy-right-paragraph{
+    font-size: 20px;
+    color: $color-secodary;
+    font-family: $font-Sahel;
+    direction: rtl;
+    span.number{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        & :hover{
+            color:$color-white;
+           font-size: 25px;
+            transition: .8s;
+        }
+    }
+}
+}

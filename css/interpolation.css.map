@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAA;EACE,UAAU,EAAC,UAAC;EACZ,MAAK,EAAC,WAAW;EAChB,gBAAgB,EAAY,KAAK;EACjC,KAAK,EAAC,IAAI;CAEd",
+    "sources": [
+        "../praimary/primery-scss/interpolation.scss"
+    ],
+    "names": [],
+    "file": "interpolation.css"
+}

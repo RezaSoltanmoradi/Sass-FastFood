@@ -1,0 +1,47 @@
+p {
+  color: red;
+  background-color: red;
+}
+
+body {
+  background-color: white;
+}
+
+.nav {
+  background-color: #84a7b6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul li {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: gray;
+  font-size: 30px;
+}
+
+.nav a:hover {
+  color: white;
+  font-size: 20px;
+}
+
+section h1, section .footer h3, .footer section h3 {
+  background-color: burlywood;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: center;
+  color: orange;
+}
+
+section h1:hover, section .footer h3:hover, .footer section h3:hover {
+  font-size: 40px;
+}
+
+.banner p {
+  color: green;
+  font-size: 20px;
+}
+/*# sourceMappingURL=main.css.map */

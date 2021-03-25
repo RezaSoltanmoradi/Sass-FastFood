@@ -1,0 +1,53 @@
+
+$color-dark:#262626;
+$color-black:#000;
+$color-secodary:#d3ab55;
+$color-praimary:#bbb;
+$color-white:#fff;
+$font-Dancing-script:'Dancing-script',cursive;
+$font-josefinsans:'josefinsans',sans-serif;
+$font-nunito:'Nunito',sans-serif;
+$font-Sahel:Sahel;
+$font-Nastaliq:Nastaliq;
+@font-face{
+font-family:Sahel;
+src: url("../fonts/fonts/Sahel.eot");
+src: url("../fonts/fonts/Sahel.ttf") format("ttf"),url("../fonts/fonts/Sahel.woff") format("woff");
+font-weight: normal;
+}
+@font-face{
+    font-family:Nastaliq;
+    src: url("../fonts/IranNastaliq.woff")format("woff");
+
+    font-weight: normal;
+}
+@mixin flexing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin textstyles {
+    font-weight: 300px;
+    letter-spacing: 2px;
+    text-transform: uppercase ;
+}
+%fullspace{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin centering($topvalue)
+ {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: $topvalue;
+    left: 50%;
+}    
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: $color-dark;
+}

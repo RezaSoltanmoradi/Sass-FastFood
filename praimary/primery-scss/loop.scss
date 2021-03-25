@@ -1,0 +1,33 @@
+$color:(
+    1:red,
+    2:blue,
+    3:green,
+    4:gold,
+    5:orange,
+);
+p{
+    font-size: 30px;
+    padding: 10px;
+}
+@for $i from 1 through 5 {
+    .paragraph-#{$i}{
+        background-color:map-get($map:$color, $key: $i );
+    }
+}
+$eachcolor:red,green,blue,yellow,orange;
+@each $color in $eachcolor {
+    .paragrapg-#{$color}{
+        background-color: $color;
+    
+    @if ($color == red) {
+        background-color: gray;
+    }
+    @else if($color==yellow){
+        background-color: red;
+    }
+    @else{
+        background-color:$color;
+    }
+}
+}
+

@@ -1,0 +1,175 @@
+.logo{
+    font-size: 70px;
+    color: $color-secodary;
+    width: 110px;
+    height: 110px;
+    margin-right: 20px;
+    border:solid 3px $color-secodary;
+    border-radius: 50%;
+ @include flexing;
+}
+.main-name{
+    color: $color-praimary;
+    font-size: 50px;
+    font-family:$font-Sahel;
+    @include textstyles;
+}
+.sub-name{
+    font-family:$font-Sahel;
+    font-size: 18px;
+    color: $color-secodary;
+    text-align: center;
+    @include textstyles;
+}
+.main-heading{
+    font-family:$font-Nastaliq;
+    font-size: 80px;
+    font-weight: 300px;
+    color: $color-secodary;
+    padding-top: 100px;
+}
+.sub-heading{
+    font-family:$font-Sahel;
+    // font-size: 60px;
+    font-weight: 300px;
+    color: $color-praimary;
+    margin-bottom: 80px;
+}
+.main-btn{
+    margin-top: -3%;
+    margin-bottom: 50px;
+    width: 170px;
+    height: 45px;
+    font-family: $font-Sahel;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-secodary;
+    background-color:transparent ;
+    border: 1px solid $color-secodary;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:all.4s;
+    transition: box shadow 1s;;
+&:hover{
+    background-color:$color-secodary;
+    color: $color-dark;
+    box-shadow: 2px -2px 10px greenyellow;  
+
+}
+&:active{
+    background-color:$color-secodary;
+    color: $color-dark;
+    box-shadow: none;
+}
+}
+
+    .main-heading{
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .sub-heading{
+        font-size: 40px;
+        // margin-bottom: 20px;
+
+    }
+    .discribtion{
+        color: $color-praimary;
+        font-size: 25px;
+        font-family: $font-Nastaliq;
+        direction: rtl;
+        text-align: justify;
+        // text-indent: 50px;
+        &::first-letter{
+            padding-right: 100px;
+        }
+    }
+  .card{
+        width: 33.3333%;
+        height: 30vw;
+        position: relative;
+        overflow: hidden;
+
+
+  &-overlay{
+        @extend %fullspace;
+        @include flexing;
+        flex-direction: column;
+        position: absolute;
+        top:0%;
+        bottom:-100%;
+        color:$color-white;
+        z-index: 5;
+        &:hover {
+            transition: .9s;
+        background-color: rgba($color: $color-secodary, $alpha: .6);
+            top: 0;
+            bottom: 0%;
+        }
+        &:hover  .card-overlay-heading{
+            position: relative;
+            transition: 1.9s;
+            right: 0;
+        }
+        &:hover .card-overlay-paragraph{
+            position: relative;
+            transition: 1.9s;
+            left: 0;
+
+        }
+        &:hover .card-overlay-btn{
+            position: relative;
+            transition: .9s;
+            top:0 ;
+        }
+        &-heading{
+            font-family: $font-Nastaliq;
+            font-size: 50px;
+            @include textstyles;
+        position: relative; 
+            top: 0%;
+            right:100%;
+        }
+        &-paragraph{
+            font-family: $font-Sahel;
+            font-size: 30px;
+            margin-bottom: 30px;
+            @include textstyles;
+        position: absolute;
+            top: 0%;
+            left: 100%;
+        }
+        &-btn{
+            width: 170px;
+            height: 45px;
+            font-family: $font-Sahel;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: black;
+            background-color: $color-secodary;
+            border: 1px solid $color-secodary;
+            border-radius: 20px;
+            cursor: pointer;
+            transition:all.4s;
+            transition: box shadow 1s;
+        position: absolute;
+            top:-100%;
+        &:hover{
+            background-color:gray;
+            color: $color-dark;
+            box-shadow: 2px -2px 10px greenyellow;  
+        
+        }
+        }
+     }
+  &-img{
+        @extend %fullspace;
+        object-fit: cover;
+        opacity: .5;
+    }
+}   
+
+    
+
+

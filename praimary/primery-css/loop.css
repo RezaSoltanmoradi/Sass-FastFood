@@ -1,0 +1,50 @@
+p {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.paragraph-1 {
+  background-color: red;
+}
+
+.paragraph-2 {
+  background-color: blue;
+}
+
+.paragraph-3 {
+  background-color: green;
+}
+
+.paragraph-4 {
+  background-color: gold;
+}
+
+.paragraph-5 {
+  background-color: orange;
+}
+
+.paragrapg-red {
+  background-color: red;
+  background-color: gray;
+}
+
+.paragrapg-green {
+  background-color: green;
+  background-color: green;
+}
+
+.paragrapg-blue {
+  background-color: blue;
+  background-color: blue;
+}
+
+.paragrapg-yellow {
+  background-color: yellow;
+  background-color: red;
+}
+
+.paragrapg-orange {
+  background-color: orange;
+  background-color: orange;
+}
+/*# sourceMappingURL=loop.css.map */

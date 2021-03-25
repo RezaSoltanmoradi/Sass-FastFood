@@ -1,0 +1,528 @@
+@font-face {
+  font-family: Sahel;
+  src: url("../fonts/fonts/Sahel.eot");
+  src: url("../fonts/fonts/Sahel.ttf") format("ttf"), url("../fonts/fonts/Sahel.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Nastaliq;
+  src: url("../fonts/IranNastaliq.woff") format("woff");
+  font-weight: normal;
+}
+
+.card-overlay, .card-img, .navbar .hanburgere-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background-color: #262626;
+}
+
+.logo {
+  font-size: 70px;
+  color: #d3ab55;
+  width: 110px;
+  height: 110px;
+  margin-right: 20px;
+  border: solid 3px #d3ab55;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-name {
+  color: #bbb;
+  font-size: 50px;
+  font-family: Sahel;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sub-name {
+  font-family: Sahel;
+  font-size: 18px;
+  color: #d3ab55;
+  text-align: center;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-family: Nastaliq;
+  font-size: 80px;
+  font-weight: 300px;
+  color: #d3ab55;
+  padding-top: 100px;
+}
+
+.sub-heading {
+  font-family: Sahel;
+  font-weight: 300px;
+  color: #bbb;
+  margin-bottom: 80px;
+}
+
+.main-btn {
+  margin-top: -3%;
+  margin-bottom: 50px;
+  width: 170px;
+  height: 45px;
+  font-family: Sahel;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d3ab55;
+  background-color: transparent;
+  border: 1px solid #d3ab55;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  transition: box shadow 1s;
+}
+
+.main-btn:hover {
+  background-color: #d3ab55;
+  color: #262626;
+  box-shadow: 2px -2px 10px greenyellow;
+}
+
+.main-btn:active {
+  background-color: #d3ab55;
+  color: #262626;
+  box-shadow: none;
+}
+
+.main-heading {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 40px;
+}
+
+.discribtion {
+  color: #bbb;
+  font-size: 25px;
+  font-family: Nastaliq;
+  direction: rtl;
+  text-align: justify;
+}
+
+.discribtion::first-letter {
+  padding-right: 100px;
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0%;
+  bottom: -100%;
+  color: #fff;
+  z-index: 5;
+}
+
+.card-overlay:hover {
+  transition: .9s;
+  background-color: rgba(211, 171, 85, 0.6);
+  top: 0;
+  bottom: 0%;
+}
+
+.card-overlay:hover .card-overlay-heading {
+  position: relative;
+  transition: 1.9s;
+  right: 0;
+}
+
+.card-overlay:hover .card-overlay-paragraph {
+  position: relative;
+  transition: 1.9s;
+  left: 0;
+}
+
+.card-overlay:hover .card-overlay-btn {
+  position: relative;
+  transition: .9s;
+  top: 0;
+}
+
+.card-overlay-heading {
+  font-family: Nastaliq;
+  font-size: 50px;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  top: 0%;
+  right: 100%;
+}
+
+.card-overlay-paragraph {
+  font-family: Sahel;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+.card-overlay-btn {
+  width: 170px;
+  height: 45px;
+  font-family: Sahel;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  background-color: #d3ab55;
+  border: 1px solid #d3ab55;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.4s;
+  transition: box shadow 1s;
+  position: absolute;
+  top: -100%;
+}
+
+.card-overlay-btn:hover {
+  background-color: gray;
+  color: #262626;
+  box-shadow: 2px -2px 10px greenyellow;
+}
+
+.card-img {
+  object-fit: cover;
+  opacity: .5;
+}
+
+.navbar {
+  position: relative;
+  z-index: 500;
+}
+
+.navbar .hanburgere-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  z-index: 500;
+}
+
+.navbar .hanburgere-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform 1s;
+  z-index: 500;
+}
+
+.navbar .hanburgere-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #d3ab55;
+  transition: transform all .5 .5;
+  transform-origin: right;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left {
+  width: 50%;
+  height: 100%;
+  background-color: #262626;
+  position: fixed;
+  left: -50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: #326496 0px 15px 60px;
+  cursor: pointer;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img :hover {
+  z-index: 100;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-1 {
+  top: 15%;
+  left: 15%;
+  z-index: 1;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-1:hover {
+  transform: rotate(360deg);
+  width: 350px;
+  height: 250px;
+  z-index: 200;
+  transition: height .5s ,width .5s,transform 1s;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-2 {
+  top: 35%;
+  left: 25%;
+  z-index: 1;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-2:hover {
+  transform: rotate(360deg);
+  width: 350px;
+  height: 250px;
+  z-index: 200;
+  transition: height .5s ,width .5s,transform 1s;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-3 {
+  top: 55%;
+  left: 35%;
+  z-index: 1;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-left .left-img-3:hover {
+  transform: rotate(360deg);
+  width: 350px;
+  height: 250px;
+  z-index: 200;
+  transition: height .5s ,width .5s,transform 1s;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-right {
+  width: 50vw;
+  height: 100vh;
+  background-color: #1f1d1f;
+  position: fixed;
+  right: -50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+  font-size: 45px;
+  padding-top: 0px;
+  font-family: Sahel;
+  direction: center;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-right .nav-list-item {
+  list-style: none;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-right .nav-list-item :hover {
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  transition: letter-spacing 1s;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-right .nav-list-item .nav-list-link {
+  text-decoration: none;
+  color: wheat;
+}
+
+.navbar .hanburgere-menu .navbar-navigation-right .nav-list-item .nav-list-link:hover {
+  color: skyblue;
+}
+
+.checbox:checked ~ .hanburgere-menu .navbar-navigation-left {
+  left: 0;
+}
+
+.checbox:checked ~ .hanburgere-menu .navbar-navigation-right {
+  right: 0;
+}
+
+.checbox:checked ~ .hanburgere-menu .menu {
+  transform: rotatez(90deg);
+}
+
+.checbox:checked ~ .hanburgere-menu .menu-line-1 {
+  transform: rotatez(-40deg);
+}
+
+.checbox:checked ~ .hanburgere-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checbox:checked ~ .hanburgere-menu .menu-line-3 {
+  transform: rotatez(40deg);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/bg.jpeg) center no-repeat;
+  background-size: cover;
+}
+
+.header .brand {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+}
+
+.header-banner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+.about-us {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about-us .about-us-left {
+  width: 40%;
+}
+
+.about-us .about-us-left img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.about-us .about-us-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.about-us .about-us-right .stars {
+  margin: 30px 0;
+}
+
+.about-us .about-us-right .star {
+  color: #d3ab55;
+  font-size: 15px;
+  margin-left: 10px;
+  padding-bottom: 50px;
+}
+
+.about-us .about-us-right .main-heading {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.about-us .about-us-right .sub-heading {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-us .about-us-right .discribtion {
+  color: #bbb;
+  font-size: 25px;
+  font-family: Nastaliq;
+  direction: rtl;
+  text-align: justify;
+}
+
+.about-us .about-us-right .discribtion::first-letter {
+  padding-right: 100px;
+}
+
+.Gallery {
+  z-index: 1;
+}
+
+.Gallery .cards-Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.footer {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer .brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.footer .social-media {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.footer .social-media-item {
+  list-style: none;
+}
+
+.footer .social-media-link {
+  text-decoration: none;
+  font-size: 50px;
+  padding-right: 20px;
+  color: #bbb;
+  transition: color .5s;
+}
+
+.footer .social-media-link:hover {
+  color: #d3ab55;
+}
+
+.footer-copy-right-paragraph {
+  font-size: 20px;
+  color: #d3ab55;
+  font-family: Sahel;
+  direction: rtl;
+}
+
+.footer-copy-right-paragraph span.number {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copy-right-paragraph span.number :hover {
+  color: #fff;
+  font-size: 25px;
+  transition: .8s;
+}
+/*# sourceMappingURL=main.css.map */

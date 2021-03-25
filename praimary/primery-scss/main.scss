@@ -1,0 +1,72 @@
+@import "-test.scss";
+body{
+    background-color: white;
+
+}
+$color-primary: orange;
+$color-secondary:gray;
+$color-tertiary:skyblue;
+$font-size-lg:40px;
+$font-size-md:30px;
+$font-size-sm:20px;
+
+@mixin headingstyle($font-size:$font-size-md){
+    color: $color-primary;
+    text-align: left;
+    font-size: $font-size;
+}
+@mixin transition($params...) 
+{
+transition:$params;
+-moz-transition:$params;
+-webkit-transition:$params;
+-o-transition:$params;  
+}
+@function dublefontsize($fontsize:20px){
+    @return $fontsize * 2;
+}
+.nav{
+    // background-color: $color-primary;
+    // background-color: darken($color: #65b5f3, $amount: 50%);
+    // background-color: lighten($color: skyblue, $amount:0%);
+    // background-color:transparentize($color: $color-primary, $amount: 0.5%);
+background-color:mix($color-secondary,$color-tertiary);
+
+    
+    display: flex;
+    justify-content:flex-end;
+    ul li{
+        list-style: none;
+
+    }
+    a{
+    text-decoration: none;
+    color: $color-secondary;
+    font-size: $font-size-md;
+    &:hover{
+color: white;
+font-size: $font-size-sm;
+    }
+    }
+}
+%heading{
+    background-color: burlywood;
+    font-size: $font-size-md;
+    text-align: center;
+ vertical-align: center;
+ color: $color-primary;
+}
+section h1{
+@extend %heading;
+&:hover{
+    font-size: $font-size-lg;
+}
+}
+.footer h3{
+@extend h1;
+}
+.banner p{
+    $color-firth:green;
+    color: $color-firth ;
+    font-size:dublefontsize(10px);
+}
